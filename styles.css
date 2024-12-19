@@ -1,0 +1,215 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  header {
+    background: #ffffff;
+    color: #333;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0cf1ad;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 2rem;
+    font-size: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    padding: 0.5rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #6a11cb;
+  }
+  
+  #hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(to right, #5a2a8e, #2575fc);
+    color: #fff;
+    border-radius: 0 0 50% 50% / 10%;
+  }
+  
+  #hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  #hero .highlight {
+    color: #ffaf40;
+  }
+  
+  #hero p {
+    margin-bottom: 1.5rem;
+    font-size: larger;
+  }
+  
+  #hero .btn {
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  #hero .btn:hover {
+    transform: scale(1.1);
+    background: #fff;
+  }
+  
+  section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  #about h2, #portfolio h2, #contact h2 {
+    font-size: 2rem;
+    color: #6a11cb;
+    margin-bottom: 1rem;
+  }
+  
+  #about p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 25px;
+  }
+  
+  #portfolio .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .portfolio-item {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .portfolio-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .portfolio-item h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 2.25rem;
+    color: #333;
+  }
+  
+  .portfolio-item p {
+    padding: 0 1rem 1rem;
+    font-size: 1.5rem;
+    color: #666;
+  }
+  
+  #contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  form input, form textarea, form button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5rem;
+  }
+  
+  form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #6a11cb;
+  }
+  
+  form button {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  form button:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+  }
+  
+  footer p {
+    font-size: 1.9rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links li {
+      margin: 0.5rem 0;
+    }
+  
+    #hero h1 {
+      font-size: 2rem;
+    }
+  
+    #portfolio .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
